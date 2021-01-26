@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+/* NavBar */
+.nav-item a {
+    color: white;
+}
+
+.nav-item a:hover {
+    font-size: 1.2rem;
+}
+
+/* DropDown */
+.__DropDown li a {
+    color: black;
+}
+
+/* AccountBox*/
+.__account a {
+    color: black;
+}
+
+.__forgetbut {
+    border: none;
+    background: #fff;
+}
+
+/* Card */
+
+.card img {
+    width: 250px;
+    height: 200px;
+}
+
+.__contentCard {
+    height: 350px;
+}
+
+/* Footer */
+
+section.footer .footer-container {
+    margin-top: 5px;
+    width: 100%;
+    height: auto;
+    background: rgba(0,0,0,0.9);
+}
+
+section.footer .footer-list {
+    padding: 2rem;
+    margin-left: 12px;
+}
+
+section.footer .footer-list li {
+    font-size: 1.2rem;
+}
+
+section.footer .footer-list li:hover {
+    font-size: 1.3rem;
+}
+
+section.footer .footer-list a {
+    color: white;
+}

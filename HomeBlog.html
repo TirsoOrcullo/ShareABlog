@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareABlog</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Navbar -->
+<div class="main">
+<ul class="nav justify-content-end bg-dark p-2">
+      <li class="nav-item px-1">  
+        <a class="nav-link active" href="#">Blogs</a>
+      </li>
+      <!-- Here -->
+      <li class="nav-item dropdown px-1">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Profile
+        </a>
+        <ul class="__DropDown dropdown-menu" aria-labelledby="navbarDropdown">
+          <!-- Create Blog Trigger Button -->
+          <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#createBlog">Create a blog</a></li>
+            <!-- Another option into do -->
+          <li><a href="#" class="dropdown-item">Your Blogs</a></li>
+          <li><a href="#" class="dropdown-item">Favorites</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Account Setting</a></li>
+        </ul>
+      </li>
+      <!-- Button Trigger Modal -->
+      <li class="nav-item px-1">
+        <button type="button" class="__accBtn btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#myAccount">
+          Account
+        </button>
+      </li>
+    </ul>
+</div>
+<!-- Create a Blog Modal -->
+<div class="modal fade" id="createBlog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Create a Blog</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Sign-In -->
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="SignIn" role="tabpanel" aria-labelledby="SignIn-tab">
+            <div class="container-fluid">
+            <div class="row">
+              <div class="col-5 p-2">
+                <div class="col-5 input-group justify-content-center">
+                  <div class="card">
+                    <img src="#" alt="#">
+                  </div>
+                    <button type="file" class="btn btn-outline-danger m-2">
+                      Upload
+                    </button>
+                </div>                
+              </div>
+              <div class="col-7 pt-2">
+              <div class="form-floating mb-1">
+                <input type="text" class="form-control" id="floatingInput">
+                <label for="floatingInput">Title</label>
+              </div>
+              <div class="form-floating mb-1">
+                <input type="text" class="form-control" id="floatingPassword">
+                <label for="floatingPassword">Category</label>
+              </div>
+              <div class="form-floating">
+                <textarea class="form-control" id="floatingTextarea2" style="height: 150px"></textarea>
+                <label for="floatingTextarea2">Content</label>
+              </div>
+          </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Account Modal -->
+<div class="modal fade" id="myAccount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Account Tabs -->
+        <ul class="__account nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="SignIn-tab" data-bs-toggle="tab" href="#SignIn" role="tab" aria-controls="SignIn" aria-selected="true">Sign in</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="Register-tab" data-bs-toggle="tab" href="#Register" role="tab" aria-controls="Register" aria-selected="false">Register</a>
+          </li>
+        </ul>
+        <!-- Sign-In -->
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="SignIn" role="tabpanel" aria-labelledby="SignIn-tab">
+            <div class="row">
+              <div class="input-group p-3 mt-3">
+                <span class="input-group-text">Email: </span>
+                <input type="text" class="form-control" placeholder="Enter your Email" required>
+              </div>
+              <div class="input-group pt-3">
+                <span class="input-group-text">Password: </span>
+                <input type="password" class="form-control" placeholder="***********" required>
+              </div>
+              <div class="input-group px-4 my-3">
+                <input class="form-check-input" type="checkbox" id="checkboxNoLabel">
+                <label class="mx-2" for="checkboxNoLabel">Remember password?</label>
+              </div>
+              <div class="input-group px-3 py-2">
+                <button type="button" class="form-control btn-outline-success">Submit</button>
+              </div>
+              <!-- Modal -->
+              <div class="input-group mt-3 px-3">
+                <button type="button" class="__forgetbut" data-bs-toggle="modal" data-bs-target="#resetPass"><a href="#">Forget your password?</a></button>
+              </div>
+            </div>
+          </div>
+          <!-- Register Tab -->
+          <div class="tab-pane fade" id="Register" role="tabpanel" aria-labelledby="Register-tab">
+            <div class="input-group p-3 mt-3">
+              <span class="input-group-text">Email: </span>
+              <input type="text" class="  form-control" placeholder="Enter your Email" required>
+            </div>
+            <div class="input-group p-3 mt-1">
+              <span class="input-group-text">Password: </span>
+              <input type="password" class="form-control" placeholder="***********" required>
+            </div>
+            <div class="input-group p-3 mt-1">
+              <span class="input-group-text">Confirm Password: </span>
+              <input type="password" class="form-control" placeholder="***********" required>
+            </div>
+            <div class="input-group p-3">
+              <button type="button" class="form-control btn-outline-success" >Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lower Navbar -->
+<section class="lower-nav">
+  <div class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-text">
+      If you want to share your experience and knowledge. You are in the right place.
+    </span>
+    <form class="d-flex">
+           <input class="form-control px-4" type="search" placeholder="Search here">
+          <button class="btn btn-outline-success px-3 mx-1" type="submit">Search</button>
+    </form>
+  </div>
+</div>
+</section>
+  <!-- Content -->
+  <!-- Categories -->
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-3 col-sm-12 col-md-12 col-lg-3 list-group mx-3 py-2">
+    <p class="list-group-item"> Categories </p>
+    <a href="" class="list-group-item list-group-item-action active" aria-current="true">
+      All
+    </a>
+    <a href="" class="list-group-item list-group-item-action">Food</a>
+    <a href="" class="list-group-item list-group-item-action">Parenting</a>
+    <a href="" class="list-group-item list-group-item-action">Politics</a>
+    <a href="" class="list-group-item list-group-item-action">Personal</a>
+    <a href="" class="list-group-item list-group-item-action">Fashion</a>
+    <a href="" class="list-group-item list-group-item-action">Health</a>
+    <a href="" class="list-group-item list-group-item-action">Travel</a>
+    <a href="" class="list-group-item list-group-item-action">Others</a>
+    
+  </div>
+
+  <div class="__contentCard col-3 col-sm-5 col-md-3 col-lg-3 card my-2" style="width: 18rem;">
+    <img src="./img/food.jpg" class="card-img-top" alt="Food">
+    <div class="card-body">
+      <h5 class="card-title">Breakfast is Important!</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+    <div class="__contentCard col-3 col-sm-5 col-md-3 col-lg-3 card m-2" style="width: 18rem;">
+      <img src="./img/parenting.jpg" class="container-fluid card-img-top" alt="Parenting">
+      <div class="card-body">
+        <h5 class="card-title">Parenting 101</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+  </div>
+  <div class="col-3 col-sm-12 col-md-12 col-lg-3 my-2">
+    <p class="list-group-item d-flex justify-content-between align-items-center">Weekly Added</p>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Food Blogs
+        <span class="badge bg-primary rounded-pill">14</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Parenting Blogs
+        <span class="badge bg-primary rounded-pill">12</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Personal Blog
+        <span class="badge bg-primary rounded-pill">10</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Pet Blogs
+        <span class="badge bg-primary rounded-pill">8</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Travel Blogs
+        <span class="badge bg-primary rounded-pill">8</span>
+      </li>
+    </ul>
+  </div> 
+  <!-- Row -->
+</div>
+</div>
+
+<!-- Pagination -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Footer -->
+  <section class="footer">
+    <div class="footer-container">
+    <div class="row">
+    <div class="col-6">
+      <ul class="footer-list">
+        <li><a href="">Blogs</a></li>
+        <li><a href="">Profile</a></li>
+        <li><a href="">Sign In</a></li>
+        <li><a href="">Sign Up</a></li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <ul class="footer-list">
+        <li><a href="">Categories</a></li>
+        <li><a href="">Weekly Added</a></li>
+        <li><a href="">What is Trend.</a></li>
+        <li><a href="">How to create?</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+  </section>
+  <!-- Main -->
+</div>
+
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+</html>
