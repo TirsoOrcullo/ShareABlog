@@ -10,20 +10,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+
   <!-- Navbar -->
 <div class="main">
 <ul class="nav justify-content-end bg-dark p-2">
       <li class="nav-item px-1">  
         <a class="nav-link active" href="#">Blogs</a>
       </li>
+
       <!-- Here -->
       <li class="nav-item dropdown px-1">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Profile
         </a>
         <ul class="__DropDown dropdown-menu" aria-labelledby="navbarDropdown">
+
           <!-- Create Blog Trigger Button -->
           <li><button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#createBlog">Create a blog</a></li>
+
             <!-- Another option into do -->
           <li><a href="#" class="dropdown-item">Your Blogs</a></li>
           <li><a href="#" class="dropdown-item">Favorites</a></li>
@@ -31,7 +35,8 @@
           <li><a class="dropdown-item" href="#">Account Setting</a></li>
         </ul>
       </li>
-      <!-- Button Trigger Modal -->
+
+      <!-- Account Button Trigger -->
       <li class="nav-item px-1">
         <button type="button" class="__accBtn btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#myAccount">
           Account
@@ -39,6 +44,7 @@
       </li>
     </ul>
 </div>
+
 <!-- Create a Blog Modal -->
 <div class="modal fade" id="createBlog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
@@ -46,9 +52,10 @@
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">Create a Blog</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+      </div>  
       <div class="modal-body">
-        <!-- Sign-In -->
+
+        <!-- Create a Blog -->
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="SignIn" role="tabpanel" aria-labelledby="SignIn-tab">
             <div class="container-fluid">
@@ -98,45 +105,49 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
+
         <!-- Account Tabs -->
         <ul class="__account nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="SignIn-tab" data-bs-toggle="tab" href="#SignIn" role="tab" aria-controls="SignIn" aria-selected="true">Sign in</a>
+            <a class="nav-link active" id="signin-tab" data-bs-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Sign-In</a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="Register-tab" data-bs-toggle="tab" href="#Register" role="tab" aria-controls="Register" aria-selected="false">Register</a>
+            <a class="nav-link" id="signup-tab" data-bs-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign-Up</a>
           </li>
         </ul>
+
         <!-- Sign-In -->
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="SignIn" role="tabpanel" aria-labelledby="SignIn-tab">
+          <div  class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
             <div class="row">
               <div class="input-group p-3 mt-3">
                 <span class="input-group-text">Email: </span>
                 <input type="text" class="form-control" placeholder="Enter your Email" required>
               </div>
-              <div class="input-group pt-3">
+              <div class="input-group p-3">
                 <span class="input-group-text">Password: </span>
                 <input type="password" class="form-control" placeholder="***********" required>
               </div>
-              <div class="input-group px-4 my-3">
+              <div class="input-group px-4 my-2">
                 <input class="form-check-input" type="checkbox" id="checkboxNoLabel">
                 <label class="mx-2" for="checkboxNoLabel">Remember password?</label>
               </div>
               <div class="input-group px-3 py-2">
                 <button type="button" class="form-control btn-outline-success">Submit</button>
               </div>
-              <!-- Modal -->
+
+              <!-- Account Modal -->
               <div class="input-group mt-3 px-3">
                 <button type="button" class="__forgetbut" data-bs-toggle="modal" data-bs-target="#resetPass"><a href="#">Forget your password?</a></button>
               </div>
             </div>
           </div>
+          
           <!-- Register Tab -->
-          <div class="tab-pane fade" id="Register" role="tabpanel" aria-labelledby="Register-tab">
+          <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
             <div class="input-group p-3 mt-3">
               <span class="input-group-text">Email: </span>
-              <input type="text" class="  form-control" placeholder="Enter your Email" required>
+              <input type="text" class="form-control" placeholder="Enter your Email" required>
             </div>
             <div class="input-group p-3 mt-1">
               <span class="input-group-text">Password: </span>
@@ -173,6 +184,7 @@
   </div>
 </div>
 </section>
+
   <!-- Content -->
   <!-- Categories -->
   <div class="container-fluid">
